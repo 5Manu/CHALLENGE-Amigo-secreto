@@ -31,3 +31,8 @@ function enter() {
 }
 PENDIENTE:
 Investigar como se puede mostrar el ARRAY en la página web a medida que el usuario vaya agregando nombres.
+
+se busca diversos mecanismos para hacer posible la necesidad del proyecto:
+Se usa el let lista = document.getElementById("listaAmigos"); para definir a cuál de los ““ul”” vamos a agregar (hay dos en el index.html)
+Se limpia este ““ul”” seleccionado en la línea anterior, si existiera un ““li”” dentro de este se borraría.
+3 y 4) Se usa un bucle ““for”” porque lo podemos programar para que recorra la totalidad de nuestra ““array”” y borre y cree todos los ““li”” que estén y luego los vuelva a poner con el nuevo integrante de nuestro ““array””
