@@ -5,6 +5,12 @@ En caso de que intente introducir un  espacio vacío debe arrojar un "alert" ind
 
 Prueba de sincronización entre GIT local y online.
 
+
+************************************************************************
+************************************************************************
+************************************************************************
+
+
 Se cumple las siguientes tareas:
 1)Se obtiene el valor ingresado por usuario a través del document.getElementById
 2)Se crea un Alert en caso de que esté vacío el INPUT
@@ -32,7 +38,48 @@ function enter() {
 PENDIENTE:
 Investigar como se puede mostrar el ARRAY en la página web a medida que el usuario vaya agregando nombres.
 
+************************************************************************
+************************************************************************
+************************************************************************
+
 se busca diversos mecanismos para hacer posible la necesidad del proyecto:
 Se usa el let lista = document.getElementById("listaAmigos"); para definir a cuál de los ““ul”” vamos a agregar (hay dos en el index.html)
 Se limpia este ““ul”” seleccionado en la línea anterior, si existiera un ““li”” dentro de este se borraría.
 3 y 4) Se usa un bucle ““for”” porque lo podemos programar para que recorra la totalidad de nuestra ““array”” y borre y cree todos los ““li”” que estén y luego los vuelva a poner con el nuevo integrante de nuestro ““array””
+
+************************************************************************
+************************************************************************
+************************************************************************
+
+Se realiza las tareas solicitadas:
+Validar que haya amigos disponibles:
+
+
+if (amigos.length == 0) {
+        //alert("Por favor, primero agrega un amigo");
+        lista.innerHTML="";
+        lista.innerHTML += `<li>Por favor, agrega a un amigo antes de sortear</li>`;
+
+
+
+Con este código validamos si hay algún elemento en el ARRAY, si lo hay crea un LI con el cual indicamos que debe agregar un amigo antes de sortear.
+
+Generar un índice aleatorio:
+
+let elegido= amigos[Math.floor(Math.random()*amigos.length)];
+
+con este código sorteamos, *ARRAY.length es lo que lo hace posible, ya que no siempre vamos a saber la cantidad de participantes en el sorteo
+
+
+Mostrar el resultado:
+ganador.innerHTML += `<li>${elegido}</li>`;
+
+Cambiamos mostramos el ganador.
+antes ya habíamos seleccionado el ID a modificar:
+let ganador = document.getElementById("resultado");
+
+
+************************************************************************
+************************************************************************
+************************************************************************
+
